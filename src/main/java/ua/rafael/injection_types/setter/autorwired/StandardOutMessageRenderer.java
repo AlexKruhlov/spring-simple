@@ -1,4 +1,4 @@
-package ua.rafael.injection_types.setter;
+package ua.rafael.injection_types.setter.autorwired;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

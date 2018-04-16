@@ -1,4 +1,4 @@
-package ua.rafael.injection_types.setter;
+package ua.rafael.injection_types.setter.autorwired;
 
 public interface MessageProvider {
 
