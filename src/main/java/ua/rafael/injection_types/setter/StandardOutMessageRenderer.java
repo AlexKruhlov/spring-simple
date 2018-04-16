@@ -1,4 +1,4 @@
-package ua.rafael;
+package ua.rafael.injection_types.setter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 @Service("messageRenderer")
 public class StandardOutMessageRenderer implements MessageRenderer {
 	
-	@Autowired
 	private MessageProvider messageProvider;
 
 	@Override
@@ -19,6 +18,7 @@ public class StandardOutMessageRenderer implements MessageRenderer {
 	}
 
 	@Override
+	@Autowired
 	public void setMessageProvider(MessageProvider messageProvider) {
 		this.messageProvider = messageProvider;
 	}

@@ -1,4 +1,4 @@
-package ua.rafael;
+package ua.rafael.injection_types.setter;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

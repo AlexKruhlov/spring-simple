@@ -1,4 +1,4 @@
-package ua.rafael;
+package ua.rafael.injection_types.setter;
 
 import org.springframework.stereotype.Service;
 
@@ -9,5 +9,4 @@ public class HelloWorldMessageProvider implements MessageProvider {
 	public String getMessage() {
 		return "Hello world!";
 	}
-
 }

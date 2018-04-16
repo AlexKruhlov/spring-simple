@@ -1,4 +1,4 @@
-package ua.rafael;
+package ua.rafael.injection_types.setter;
 
 public interface MessageRenderer {
 	
