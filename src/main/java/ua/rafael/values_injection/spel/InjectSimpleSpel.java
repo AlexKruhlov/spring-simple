@@ -1,4 +1,4 @@
-package ua.com.values_injection.spel;
+package ua.rafael.values_injection.spel;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;

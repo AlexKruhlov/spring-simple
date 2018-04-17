@@ -1,11 +1,11 @@
-package ua.com.appcontext_injection;
+package ua.rafael.appcontext_injection;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import ua.com.appcontext_injection.childbeans.ChildConfig;
-import ua.com.appcontext_injection.parentbeans.FirstParentComponent;
-import ua.com.appcontext_injection.parentbeans.ParentConfig;
+import ua.rafael.appcontext_injection.childbeans.ChildConfig;
+import ua.rafael.appcontext_injection.parentbeans.FirstParentComponent;
+import ua.rafael.appcontext_injection.parentbeans.ParentConfig;
 
 public class App {
 

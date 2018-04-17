@@ -1,4 +1,4 @@
-package ua.com.appcontext_injection.parentbeans;
+package ua.rafael.appcontext_injection.parentbeans;
 
 import org.springframework.stereotype.Component;
 
