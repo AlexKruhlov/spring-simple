@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class PlainContactDao implements ContactDao {
 	private static String PASSWORD = "1";
 
 	private static String FIND_ALL_QUERY = "SELECT * FROM contact";
+	private static String INSERT_QUERY = "INSERT INTO contact (first_name,last_name,birth_date) VALUES (?,?,?)";
 
 	static {
 		try {
@@ -72,8 +74,20 @@ public class PlainContactDao implements ContactDao {
 
 	@Override
 	public void insert(Contact contact) {
-		// TODO Auto-generated method stub
-
+		try (Connection connection = getConnection()) {
+			PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QUERY,
+					Statement.RETURN_GENERATED_KEYS);
+			preparedStatement.setString(1, contact.getFirstName());
+			preparedStatement.setString(2, contact.getLastName());
+			preparedStatement.setDate(3, contact.getBirthDate());
+			preparedStatement.executeQuery();
+			ResultSet resultSet = preparedStatement.getResultSet();
+			while (resultSet.next()) {
+				contact.setId(resultSet.getInt("id"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
