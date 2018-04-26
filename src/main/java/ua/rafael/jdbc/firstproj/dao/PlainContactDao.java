@@ -1,7 +1,5 @@
 package ua.rafael.jdbc.firstproj.dao;
 
-import static java.util.Objects.nonNull;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -10,8 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.naming.CommunicationException;
 
 import ua.rafael.jdbc.firstproj.model.Contact;
 
@@ -80,8 +76,8 @@ public class PlainContactDao implements ContactDao {
 			preparedStatement.setString(1, contact.getFirstName());
 			preparedStatement.setString(2, contact.getLastName());
 			preparedStatement.setDate(3, contact.getBirthDate());
-			preparedStatement.executeQuery();
-			ResultSet resultSet = preparedStatement.getResultSet();
+			preparedStatement.execute();
+			ResultSet resultSet = preparedStatement.getGeneratedKeys();
 			while (resultSet.next()) {
 				contact.setId(resultSet.getInt("id"));
 			}
@@ -92,7 +88,6 @@ public class PlainContactDao implements ContactDao {
 
 	@Override
 	public void update(Contact contact) {
-		// TODO Auto-generated method stub
 
 	}
 
