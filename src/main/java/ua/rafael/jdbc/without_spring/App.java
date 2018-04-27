@@ -1,11 +1,11 @@
-package ua.rafael.jdbc.firstproj;
+package ua.rafael.jdbc.without_spring;
 
 import java.sql.Date;
 import java.util.GregorianCalendar;
 
-import ua.rafael.jdbc.firstproj.dao.ContactDao;
-import ua.rafael.jdbc.firstproj.dao.PlainContactDao;
-import ua.rafael.jdbc.firstproj.model.Contact;
+import ua.rafael.jdbc.without_spring.dao.ContactDao;
+import ua.rafael.jdbc.without_spring.dao.PlainContactDao;
+import ua.rafael.jdbc.without_spring.model.Contact;
 
 public class App {
 	private static ContactDao contactDao = new PlainContactDao();

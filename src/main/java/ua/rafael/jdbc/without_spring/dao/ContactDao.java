@@ -1,8 +1,8 @@
-package ua.rafael.jdbc.firstproj.dao;
+package ua.rafael.jdbc.without_spring.dao;
 
 import java.util.List;
 
-import ua.rafael.jdbc.firstproj.model.Contact;
+import ua.rafael.jdbc.without_spring.model.Contact;
 
 public interface ContactDao {
 	List<Contact> findAll();

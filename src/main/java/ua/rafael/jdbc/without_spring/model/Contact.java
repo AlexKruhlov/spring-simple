@@ -1,4 +1,4 @@
-package ua.rafael.jdbc.firstproj.model;
+package ua.rafael.jdbc.without_spring.model;
 
 import java.sql.Date;
 import java.util.List;

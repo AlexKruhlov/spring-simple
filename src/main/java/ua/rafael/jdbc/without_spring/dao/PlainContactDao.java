@@ -1,4 +1,4 @@
-package ua.rafael.jdbc.firstproj.dao;
+package ua.rafael.jdbc.without_spring.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import ua.rafael.jdbc.firstproj.model.Contact;
+import ua.rafael.jdbc.without_spring.model.Contact;
 
 public class PlainContactDao implements ContactDao {
 	private static String URL = "jdbc:postgresql://localhost/postgres";
