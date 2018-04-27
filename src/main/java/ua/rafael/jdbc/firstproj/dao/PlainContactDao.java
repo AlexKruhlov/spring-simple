@@ -18,6 +18,7 @@ public class PlainContactDao implements ContactDao {
 
 	private static String FIND_ALL_QUERY = "SELECT * FROM contact";
 	private static String INSERT_QUERY = "INSERT INTO contact (first_name,last_name,birth_date) VALUES (?,?,?)";
+	private static String DELETE_QUERY = "DELETE FROM contact WHERE id=?";
 
 	static {
 		try {
@@ -92,8 +93,13 @@ public class PlainContactDao implements ContactDao {
 	}
 
 	@Override
-	public void delete(Long contactId) {
-		// TODO Auto-generated method stub
-
+	public void delete(Integer contactId) {
+		try (Connection connection = getConnection()) {
+			PreparedStatement statement = connection.prepareStatement(DELETE_QUERY);
+			statement.setInt(1, contactId);
+			statement.execute();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

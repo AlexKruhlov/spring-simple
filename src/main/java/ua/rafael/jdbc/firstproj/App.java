@@ -19,6 +19,7 @@ public class App {
 		contact.setBirthDate(new Date(new GregorianCalendar(2001, 10, 1).getTime().getTime()));
 		contactDao.insert(contact);
 		System.out.println(contactDao.findAll());
-
+		contactDao.delete(1);
+		System.out.println(contactDao.findAll());
 	}
 }
