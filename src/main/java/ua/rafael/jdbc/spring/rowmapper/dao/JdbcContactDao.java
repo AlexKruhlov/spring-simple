@@ -2,9 +2,7 @@ package ua.rafael.jdbc.spring.rowmapper.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.sql.DataSource;
 
@@ -55,6 +53,5 @@ public class JdbcContactDao implements ContactDao {
 			resulcontact.setLastName(rs.getString(LAST_NAME));
 			return resulcontact;
 		}
-
 	}
 }
