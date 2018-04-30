@@ -10,12 +10,16 @@ import ua.rafael.jdbc.spring.config.SqlExceptionCodesTranslator;
 
 @Repository
 public class JdbcContactDao implements ContactDao {
-	private JdbcTemplate jdbcTemplate;
+	public static String FIND_NAME_BY_ID_QUERY = "SELECT first_name FROM contact WHERE id=?";
 
-	@Autowired
+	private JdbcTemplate jdbcTemplate;
 	private DataSource dataSource;
 
-	public void setDataSource(DataSource dataSource) {
+	public JdbcContactDao() {
+	}
+
+	@Autowired
+	public JdbcContactDao(DataSource dataSource) {
 		this.dataSource = dataSource;
 		JdbcTemplate jdbcTemplate = new JdbcTemplate();
 		jdbcTemplate.setDataSource(dataSource);
@@ -27,6 +31,6 @@ public class JdbcContactDao implements ContactDao {
 
 	@Override
 	public String findLastNameById(Integer id) {
-		return null;
+		return jdbcTemplate.queryForObject(FIND_NAME_BY_ID_QUERY, new Object[] { id }, String.class);
 	}
 }

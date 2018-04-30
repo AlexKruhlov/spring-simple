@@ -18,7 +18,7 @@ public class JdbcSpringConfiguration {
 	private static final String PASSWORD = "jdbc.password";
 
 	@Autowired
-	Environment env;
+	private Environment env;
 
 	@Bean
 	public DataSource dataSource() {
