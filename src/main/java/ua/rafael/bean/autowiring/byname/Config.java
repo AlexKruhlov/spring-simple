@@ -4,6 +4,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("ua.rafael.bean.bean.autowiring.byname")
+@ComponentScan("ua.rafael.bean.autowiring.byname")
 public class Config {
 }

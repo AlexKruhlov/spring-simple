@@ -3,9 +3,8 @@ package ua.rafael.bean.autowiring.byname;
 import org.springframework.stereotype.Service;
 
 @Service("simpleHello")
-public class HelloWorldMessageProvider implements MessageProvider {
+public class HelloWorldMessageProvider {
 
-	@Override
 	public String getMessage() {
 		return "Hello world!";
 	}
