@@ -10,7 +10,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @Configuration
-@PropertySource("ua/rafael/jdbc/spring/jdbc.properties")
+@PropertySource("ua/rafael/jdbc/spring/jdbctemplate/jdbc.properties")
 public class JdbcSpringConfiguration {
 	private static final String DRIVER = "jdbc.driver";
 	private static final String URL = "jdbc.url";

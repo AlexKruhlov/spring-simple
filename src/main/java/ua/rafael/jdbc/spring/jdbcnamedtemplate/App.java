@@ -5,8 +5,8 @@ import javax.sql.DataSource;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import ua.rafael.jdbc.spring.jdbctemplate.config.Config;
-import ua.rafael.jdbc.spring.jdbctemplate.dao.ContactDao;
+import ua.rafael.jdbc.spring.jdbcnamedtemplate.config.Config;
+import ua.rafael.jdbc.spring.jdbcnamedtemplate.dao.ContactDao;
 
 public class App {
 	public static int FIRST_CONTACT_ID = 1;
