@@ -1,4 +1,4 @@
-package ua.rafael.jdbc.spring.dao;
+package ua.rafael.jdbc.spring.jdbcnamedtemplate.dao;
 
 public interface ContactDao {
 

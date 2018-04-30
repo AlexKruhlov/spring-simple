@@ -1,4 +1,4 @@
-package ua.rafael.jdbc.spring.config;
+package ua.rafael.jdbc.spring.jdbctemplate.config;
 
 import javax.sql.DataSource;
 

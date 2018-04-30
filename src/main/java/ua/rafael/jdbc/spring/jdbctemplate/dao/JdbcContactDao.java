@@ -1,4 +1,4 @@
-package ua.rafael.jdbc.spring.dao;
+package ua.rafael.jdbc.spring.jdbctemplate.dao;
 
 import javax.sql.DataSource;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import ua.rafael.jdbc.spring.config.SqlExceptionCodesTranslator;
+import ua.rafael.jdbc.spring.jdbctemplate.config.SqlExceptionCodesTranslator;
 
 @Repository
 public class JdbcContactDao implements ContactDao {
