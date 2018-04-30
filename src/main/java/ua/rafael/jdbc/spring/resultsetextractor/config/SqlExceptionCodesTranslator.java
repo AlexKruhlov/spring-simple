@@ -12,5 +12,4 @@ public class SqlExceptionCodesTranslator extends SQLErrorCodeSQLExceptionTransla
 	protected DataAccessException customTranslate(String task, String sql, SQLException sqlEx) {
 		return sqlEx.getErrorCode() == -12345 ? new DeadlockLoserDataAccessException(task, sqlEx) : null;
 	}
-
 }
