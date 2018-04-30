@@ -7,7 +7,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.jdbc.datasource.init.DatabasePopulator;
+import org.springframework.jdbc.datasource.init.DatabasePopulatorUtils;
+import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 
 @Configuration
 @PropertySource("ua/rafael/jdbc/spring/resultsetextractor/jdbc.properties")
@@ -27,6 +32,9 @@ public class JdbcSpringConfiguration {
 		dataSource.setUrl(env.getProperty(URL));
 		dataSource.setUsername(env.getProperty(USER_NAME));
 		dataSource.setPassword(env.getProperty(PASSWORD));
+		Resource resourceInitSchema = new ClassPathResource("ua/rafael/jdbc/spring/resultsetextractor/mydata");
+		DatabasePopulator databasePopulator = new ResourceDatabasePopulator(resourceInitSchema);
+		DatabasePopulatorUtils.execute(databasePopulator, dataSource);
 		return dataSource;
 	}
 }
